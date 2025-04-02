@@ -5,7 +5,8 @@
   "scripts": {
     "test": "jest",
     "lint": "prettier --check . && eslint .",
-    "lint:fix": "prettier --write . && eslint . --fix"
+    "lint:fix": "prettier --write . && eslint . --fix",
+    "prepare": "husky install"
   },
   "keywords": [],
   "author": "",
@@ -30,5 +31,9 @@
     "next": "^15.2.4",
     "react": "^19.1.0",
     "react-dom": "^19.1.0"
+  },
+  "lint-staged": {
+    "*.js": "eslint --fix",
+    "*.{js,css,md}": "prettier --write"
   }
 }
